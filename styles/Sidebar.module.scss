@@ -1,0 +1,20 @@
+
+$background: rgb(9, 41, 19);
+
+.sidebar {
+  background: $background;
+  color: white;
+  height: 100vh;
+  max-width: 300px;
+  width: 90vw;
+
+  &::before {
+    background: $background;
+    content: " ";
+    height: 100vh; 
+    left: -15vw;
+    position: absolute;
+    top: 0px;
+    width: 20vw;
+  }
+}

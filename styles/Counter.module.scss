@@ -1,0 +1,55 @@
+/* stylelint-disable at-rule-no-unknown */
+@import "./util.scss";
+
+.counterContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+
+  .counter {
+    @include centerContents;
+    flex-direction: row;
+    height: 80px;
+    position: relative;
+
+    div {
+      height: 100%;
+    }
+
+    .button {
+      @include centerContents;
+      background: rgb(221, 221, 221);
+      border-radius: 50px;
+      color: rgb(31, 31, 31);
+      filter: drop-shadow(2px 2px 3px rgba(black, 0.2));
+      font-size: 50px;
+      height: 50px;
+      transition: filter 0.15s;
+      user-select: none;
+      width: 50px;
+
+      span {
+        position: relative;
+        top: -9%;
+        
+      }
+
+      &:active {
+        filter: drop-shadow(0px 0px 0px transparent);
+      }
+    }
+  
+    .value {
+      @include centerContents;
+      border: 1px solid black;
+      border-radius: 5px;
+      display: flex;
+      font-size: 30px;
+      justify-content: center;
+      margin: 0px 15px 0px 15px;
+      width: 80px;
+    }
+  }
+
+}

@@ -1,0 +1,6 @@
+/* stylelint-disable at-rule-no-unknown */
+@mixin centerContents {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}

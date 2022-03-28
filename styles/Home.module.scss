@@ -1,3 +1,7 @@
+/* stylelint-disable at-rule-no-unknown */
+
+@import "./util.scss";
+
 .container {
   padding: 0 2rem;
 }
@@ -10,6 +14,28 @@
   justify-content: center;
   min-height: 100vh;
   padding: 4rem 0;
+
+  .sidebarContainer { 
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: fit-content;
+  }
+  
+  .section {
+    border: 1px solid #555555;
+    border-radius: 30px;
+    margin: 20px;
+    width: 90vw;
+
+   
+  
+  }
+
+  .label {
+    font-size: 20px;
+    font-weight: bold;
+  }
 }
 
 .footer {
@@ -21,97 +47,25 @@
   padding: 2rem 0;
 }
 
-.footer a {
-  align-items: center;
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
 .title {
   font-size: 4rem;
   line-height: 1.15;
   margin: 0;
 }
 
-.title,
-.description {
-  text-align: center;
+.header {
+  @include centerContents;
+  background: #143814;
+  color: white;  
+  min-height: 15vh;
+  position: absolute;
+  top: 0px;
+  width: 100vw;
 }
 
-.description {
-  font-size: 1.5rem;
-  line-height: 1.5;
-  margin: 4rem 0;
-}
+@media (min-width: 728px) {
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-  font-size: 1.1rem;
-  padding: 0.75rem;
-}
-
-.grid {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 800px;
-}
-
-.card {
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  color: inherit;
-  margin: 1rem;
-  max-width: 300px;
-  padding: 1.5rem;
-  text-align: left;
-  text-decoration: none;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  border-color: #0070f3;
-  color: #0070f3;
-}
-
-.card h2 {
-  font-size: 1.5rem;
-  margin: 0 0 1rem;
-}
-
-.card p {
-  font-size: 1.25rem;
-  line-height: 1.5;
-  margin: 0;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-
-  .grid {
-    flex-direction: column;
-    width: 100%;
+  .section {
+    max-width: 60vw;
   }
 }
